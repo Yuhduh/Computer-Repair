@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>Computer_Repair</RootNamespace>
+    <StartupObject>Sub Main</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+    <MyType>WindowsForms</MyType>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="CustomersPage.vb" />
+    <Compile Update="CustomersPage.Designer.vb"><DependentUpon>CustomersPage.vb</DependentUpon></Compile>
+    <Compile Update="EmployeesPage.vb"><SubType>UserControl</SubType></Compile>
+    <Compile Update="EmployeesPage.Designer.vb"><DependentUpon>EmployeesPage.vb</DependentUpon></Compile>
+    <Compile Update="HomePage.vb"><SubType>UserControl</SubType></Compile>
+    <Compile Update="HomePage.Designer.vb"><DependentUpon>HomePage.vb</DependentUpon></Compile>
+    <Compile Update="IntakePage.vb" />
+    <Compile Update="IntakePage.Designer.vb"><DependentUpon>IntakePage.vb</DependentUpon></Compile>
+    <Compile Update="LoginForm.vb"><SubType>Form</SubType></Compile>
+    <Compile Update="LoginForm.Designer.vb"><DependentUpon>LoginForm.vb</DependentUpon></Compile>
+    <Compile Update="MainForm.vb"><SubType>Form</SubType></Compile>
+    <Compile Update="MainForm.Designer.vb"><DependentUpon>MainForm.vb</DependentUpon></Compile>
+    <Compile Update="QuotesPage.vb" />
+    <Compile Update="QuotesPage.Designer.vb"><DependentUpon>QuotesPage.vb</DependentUpon></Compile>
+    <Compile Update="ReleasesPage.vb" />
+    <Compile Update="ReleasesPage.Designer.vb"><DependentUpon>ReleasesPage.vb</DependentUpon></Compile>
+    <Compile Update="RepairsPage.vb"><SubType>UserControl</SubType></Compile>
+    <Compile Update="RepairsPage.Designer.vb"><DependentUpon>RepairsPage.vb</DependentUpon></Compile>
+    <Compile Update="My Project\Application.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
